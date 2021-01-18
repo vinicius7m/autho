@@ -1,6 +1,6 @@
 <?php
 
-class Connection {
+abstract class Connection {
     private $servDB = "mysql:host=localhost;dbname=db_autho";
     private $user = "root";
     private $pass = "";
