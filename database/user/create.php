@@ -2,9 +2,9 @@
 
 require_once '../../classes/autoload.php';
 
-$name = "Vinícius";
-$email = "vinicius.vsm777@gmail.com";
-$password = "girafaverde";
+$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+$password = filter_input(INPUT_POST, 'password');
 
 $newUser = new User();
 $newUser->formData($name, $email, $password);
